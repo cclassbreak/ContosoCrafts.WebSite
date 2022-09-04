@@ -28,6 +28,8 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+app.MapControllers();
+
 app.MapGet("api/products", (context) =>
 {
     var products = app.Services.GetService<JsonFileProductService>().GetProducts();
