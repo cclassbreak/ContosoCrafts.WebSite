@@ -3,8 +3,14 @@
 @{
 }
 
-@foreach (var product in Model.Products){
-    <h2>
-        @product.Title
-    </h2>
-}
+<div class="card-columns">
+    @foreach (var product in Model.Products)
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@product.Img');"></div>
+            <div class="card-body">
+                <h5>@product.Title</h5>
+            </div>
+        </div>
+    }
+</div>
