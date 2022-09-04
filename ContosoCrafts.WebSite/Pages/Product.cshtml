@@ -1,0 +1,10 @@
+﻿@page
+@model ContosoCrafts.WebSite.Pages.ProductModel
+@{
+}
+
+@foreach (var product in Model.Products){
+    <h2>
+        @product.Title
+    </h2>
+}
