@@ -23,5 +23,14 @@ namespace ContosoCrafts.WebSite.Controllers
             return ProductService.GetProducts();
         }
 
+        [Route("details")]
+        [HttpGet]
+        public Product GetProduct([FromQuery] string id)
+        {
+            var products = ProductService.GetProducts();
+            var product = products.First(x => x.Id == id);
+            return product;
+        }
+
     }
 }
